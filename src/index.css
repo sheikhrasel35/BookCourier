@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+ }
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+
+  /* Custom colors */
+  --color-primary: #22c122;
+  --color-secondary: #141414;
+  --color-bg: #F0EDED;
+  --color-bg-primary:#ffffff;
+  --color-bg-secondary:#E5E7EB;
+  --color-whitebg: #f9fafb;
+  --color-bg-2: #e5e7eb;
+  --color-blacktext: #000000;
+  --color-text: #424242;
+  --color-text-secondary:#4B5563;
+  --color-heading: #292922;
+  --color-accent: #facc15;
+  --color-hoverbg: #D3D3DE;
+}
+@plugin "daisyui/theme" {
+  name: "dark";
+
+  --color-primary: #0CF58D;
+  --color-secondary: #ffffff;
+  --color-bg: #2B2B4A;
+  --color-bg-primary: #1F2937;
+  --color-bg-secondary: #111827;
+  --color-whitebg: #6b7280;
+  --color-bg-2: #374151;
+  --color-blacktext: #42C742;
+  --color-text: #4d4d4d;
+  --color-text-secondary:#9CA3AF;
+  --color-heading: #e4e4e4;
+  --color-accent: #f472b6;
+  --color-hoverbg: #22224A;
+}
+
+.hoverbg {
+  background-color: var(--color-hoverbg);
+}
+
+.bg-gray-200 {
+  background-color: var(--color-bg-2);
+}
+.text-blacktext {
+  color: var(--color-blacktext);
+}
+.whitebg {
+  background-color: var(--color-bg-primary);
+}
+.graybg {
+  background-color: var(--color-bg-secondary);
+}
+
+.description {
+  color: var(--color-text-secondary);
+}
+
+
+/* Light theme */
+[data-theme="light"] .border-b-theme {
+  border-bottom: 1px solid rgb(209, 207, 206);
+}
+
+/* Dark theme */
+[data-theme="dark"] .border-b-theme {
+  border-bottom: 1px solid #6c7480; 
+}
+
+/* Purple color: text-purple-600 */
+
+/* Custom button override */
+.btn-primary {
+  @apply bg-gradient-to-r from-[#16DB96] to-[#14A651] border-none text-white;
+}
+.btn-primary:hover {
+   @apply brightness-110 -translate-y-0.5 shadow-lg;
+   cursor: pointer;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.6s ease-out both;
+}
+
+.delay-150 {
+  animation-delay: 150ms;
+}
+
