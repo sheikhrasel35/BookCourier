@@ -1,13 +1,8 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth"; 
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDvRRIJxKxSOFDxtvJXCyyOC_kPwOiCQ5U",
+  apiKey: "AIzaSyDvRRlJxKxSOFDxtvJXCyY0C_kPw0iCQ5U",
   authDomain: "bookcourier-b525d.firebaseapp.com",
   projectId: "bookcourier-b525d",
   storageBucket: "bookcourier-b525d.firebasestorage.app",
@@ -16,6 +11,8 @@ const firebaseConfig = {
   measurementId: "G-XGHGG6M7C3"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+export const auth = getAuth(app); 
+
+export default app;
